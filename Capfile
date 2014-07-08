@@ -7,6 +7,7 @@ require 'capistrano/bundler'
 require 'capistrano/rails'
 
 require 'capistrano/rbenv'
+require 'capistrano/puma'
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.1.2'
 

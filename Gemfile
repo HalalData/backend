@@ -50,6 +50,7 @@ group :development do
 	gem 'capistrano-bundler', '~> 1.1.2'
 	gem 'capistrano-rails'
 	gem 'capistrano-rbenv', github: "capistrano/rbenv"
+	gem 'capistrano3-puma', github: "seuros/capistrano-puma"
 end
 
 
