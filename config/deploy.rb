@@ -34,7 +34,7 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-set :puma_bind, %w("tcp://0.0.0.0:9292" "unix://#{shared_path}/tmp/sockets/puma.sock")
+set :puma_bind, %w(tcp://0.0.0.0:9292 unix:///tmp/puma.sock)
 
 namespace :deploy do
 
