@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  host: localhost
   database: halaldata_prod
   username: halal_adm
   password: <%= ENV['MUSLIMDATA_DATABASE_PASSWORD'] %>
