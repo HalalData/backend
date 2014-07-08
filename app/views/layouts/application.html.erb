@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Muslimdata</title>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halal Data</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
 
-<%= yield %>
+		<!-- header navigation -->
+		<div class="header">
+	    <ul class="nav nav-pills pull-right">
+	      <li><a href="#">Home</a></li>
+	      <li><a href="#">About</a></li>
+	      <li><a href="#">Sign In</a></li>
+	      <li><a href="#">Sign Up</a></li>
+	    </ul>
+  	</div>
 
+	<%= yield %>
+
+	</div>
 </body>
 </html>
