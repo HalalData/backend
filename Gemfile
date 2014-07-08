@@ -45,13 +45,13 @@ gem "rails_admin"
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-#group :development do
-#	gem 'capistrano', '~> 3.1.0'
-#	gem 'capistrano-bundler', '~> 1.1.2'
-#	gem 'capistrano-rails'
-#	gem 'capistrano-rbenv', github: "capistrano/rbenv"
+group :development do
+	gem 'capistrano', '~> 3.1.0'
+	gem 'capistrano-bundler', '~> 1.1.2'
+	gem 'capistrano-rails'
+	gem 'capistrano-rbenv', github: "capistrano/rbenv"
 #	gem 'capistrano3-puma', github: "seuros/capistrano-puma"
-#end
+end
 
 
 # Use debugger

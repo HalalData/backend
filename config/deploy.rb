@@ -34,16 +34,14 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-set :puma_bind, %w(tcp://0.0.0.0:9292 unix:///tmp/puma.sock)
-
 namespace :deploy do
 
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
-    end
+      execute :mkdir, '-p', release_path.join('tmp')
+      execute :touch, release_path.join('tmp/restart.txt')
   end
 
   after :publishing, :restart
