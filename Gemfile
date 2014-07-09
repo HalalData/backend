@@ -35,6 +35,9 @@ gem "cancan"
 # Admin interface
 gem "rails_admin"
 
+# xlsx file
+gem 'rubyXL'
+
 # Use Puma as app server
 #gem "puma"
 

@@ -138,6 +138,10 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     remotipart (1.2.1)
+    rubyXL (3.1.2)
+      nokogiri (>= 1.4.4)
+      rubyzip (>= 1.1.6)
+    rubyzip (1.1.6)
     safe_yaml (1.0.3)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -194,6 +198,7 @@ DEPENDENCIES
   mysql2
   rails (= 4.1.4)
   rails_admin
+  rubyXL
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
