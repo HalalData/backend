@@ -1,4 +1,4 @@
 class Place < ActiveRecord::Base
-	belongs_to :category
-	belongs_to :country
+	has_one :category
+	has_one :country
 end
