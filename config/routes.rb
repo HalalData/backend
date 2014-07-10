@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/manage', as: 'rails_admin'
+  get 'home/show'
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
