@@ -3,8 +3,6 @@ class HomeController < ApplicationController
   end
 
   def show
-  	places = Search.full_text_search(params[:query])
-
-  	#@response = places
+  	@Places = Search.full_text_search(params[:query])
   end
 end
