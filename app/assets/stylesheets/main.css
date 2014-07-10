@@ -25,10 +25,3 @@
 .submit-btn {
 	width: 100%;
 }
-
-@media (min-width: @screen-sm-min) {
-	.footer-nav {
-		margin-top: 80px;
-		width: 280px;
-	}	
-}
