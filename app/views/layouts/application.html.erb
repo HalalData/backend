@@ -10,20 +10,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-
-		<!-- header navigation -->
-		<div class="header">
-	    <ul class="nav nav-pills pull-right">
-	      <li><a href="#">Home</a></li>
-	      <li><a href="#">About</a></li>
-	      <li><%= link_to "Sign In", new_user_session_path %></li>
-	      <li><%= link_to "Sign Up", new_user_registration_path %></li>
-	    </ul>
-  	</div>
 
 	<%= yield %>
 
-	</div>
 </body>
 </html>

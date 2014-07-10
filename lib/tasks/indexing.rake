@@ -4,15 +4,14 @@ namespace :indexing do
   	places = Place.all
 
   	places.each do |row|
-  		search = Search.create(
-  			name: row.name, 
-  			address: row.address, 
-  			postal_code: row.postal_code, 
-  			latitude: row.latitude, 
-  			longitude: row.longitude,
-  			country_name: row.country.name,
-  			category_name: row.category.name
-  			)
+      search = Search.new
+      search.name = row.name 
+  		search.address = row.address 
+  		search.postal_code = row.postal_code 
+  		search.longitude = row.longitude
+  		search.country_name = row.country.name
+  		search.category_name = row.category.name
+  		search.save
   	end
   end
 
