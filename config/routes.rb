@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  
+  resources :place
+
   devise_for :users
   mount RailsAdmin::Engine => '/manage', as: 'rails_admin'
+  
   get 'home/show'
   get 'home/index'
 

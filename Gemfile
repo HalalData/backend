@@ -38,6 +38,9 @@ gem "rails_admin"
 # xlsx file
 gem 'rubyXL'
 
+# pagination gem
+gem 'kaminari'
+
 # Use Puma as app server
 #gem "puma"
 

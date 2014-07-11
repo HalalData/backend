@@ -12,9 +12,8 @@
 	margin-bottom: 30px;
 }
 
-/* custom field for what? */
-.custom-field {
-	margin-bottom: 20px;
+.centered {
+	text-align: center;
 }
 
 .footer-nav {
@@ -28,4 +27,30 @@
 
 .list-item {
 	margin-bottom: 30px;
+	padding: 1px 10px 10px 10px;
+}
+
+.list-item:hover {
+	background: #efefef;
+}
+
+.list-item p {
+	margin: 0;
+}
+
+.list-item h3 {
+	font-weight: 400;
+}
+
+.list-item h3 a {
+	color: #000;
+}
+
+/* user form */
+.user-form .row {
+	margin-bottom: 20px;
+}
+
+.user-field {
+	width: 100%;
 }

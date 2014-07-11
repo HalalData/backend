@@ -1,0 +1,45 @@
+<%= render "include/navbar" %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-7 col-md-7 place">
+			<h3><%= @Place.name.split.map(&:capitalize).join(' ') %></h3>
+			<p><%= @Place.address.split.map(&:capitalize).join(' ') %></p>
+			<p><%= @Place.country_name + ", " + @Place.postal_code %></p>
+			<ul class="metadata">
+				<li>
+					Phone: 
+					<%- if @Place.phone %> 
+					<%= @Place.phone %> 
+					<%- else %>
+					<%= raw("<i>contribute to complete it</i>") %>
+					<%- end %>
+				</li>
+				<li>
+					Fax: 
+					<%- if @Place.fax %> 
+					<%= @Place.fax %> 
+					<%- else %>
+					<%= raw("<i>contribute to complete it</i>") %>
+					<%- end %>
+				</li>
+				<li>
+					Email: 
+					<%- if @Place.email %> 
+					<%= @Place.email %> 
+					<%- else %>
+					<%= raw("<i>contribute to complete it</i>") %>
+					<%- end %>
+				</li>
+				<li>
+					Website: 
+					<%- if @Place.website %> 
+					<%= @Place.website %> 
+					<%- else %>
+					<%= raw("<i>contribute to complete it</i>") %>
+					<%- end %>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
