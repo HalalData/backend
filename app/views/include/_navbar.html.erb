@@ -24,9 +24,14 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", "" %></li>
+        <li><%= link_to "About", about_path %></li>
+        <% unless user_signed_in? == true %>
         <li><%= link_to "Sign In", new_user_session_path %></li>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% else %>
+        <li><%= link_to "Manage Data", rails_admin_path %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

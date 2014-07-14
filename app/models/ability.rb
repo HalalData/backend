@@ -6,8 +6,10 @@ class Ability
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
       if user.role == "author"
-        can :manage, [Place]
-        can :read, [Place, Country, Category] 
+        can :create, [Place]
+        can :update, [Place]
+        can :read, [Place, Country, Category]
+        can :create, [Country, Category] 
       elsif user.role == "admin"
         can :manage, :all
         can :read, :all 

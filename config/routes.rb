@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'about', to: 'page#index', as: :about
+
   resources :place
 
   devise_for :users

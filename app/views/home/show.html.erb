@@ -5,15 +5,23 @@
 		<div class="col-xs-12 col-sm-7 col-md-7">
 			
 			<!-- loop here -->
-			<% @Places.each do |row| %>
-			<div class="list-item">
-				<h3><%= link_to row.name.split.map(&:capitalize).join(' '), place_path(row.id) %></h3>
-				<p><%= row.address.split.map(&:capitalize).join(' ') %></p>
-				<p><%= row.country_name + ", " + row.postal_code %></p>
-			</div>
-			<% end %>
+			<% if @Places.total_count > 0 %>
+				<% @Places.each do |row| %>
+				<div class="list-item">
+					<h3><%= link_to row.name.split.map(&:capitalize).join(' '), place_path(row.id) %></h3>
+					<p><%= row.address.split.map(&:capitalize).join(' ') %></p>
+					<p><%= row.country_name + ", " + row.postal_code %></p>
+				</div>
+				<% end %>
 
 			<%= paginate @Places %>
+			<% else %>
+			<div class="list-item">
+				<h3>Ooops...no halal data found :(</h3>
+				<p><i>Currently our data are only covering Singapore and Thailand.</i></p>
+				<p><i>Help us by <%= link_to "contributing", about_path %> to input another halal data in your hometown.</i></p>
+			</div>
+			<% end %>
 		</div>
 	</div>
 </div>

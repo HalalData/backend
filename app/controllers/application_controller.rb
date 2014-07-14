@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 	rescue_from CanCan::AccessDenied do |exception|
     redirect_to dashboard_path, :alert => exception.message
   end
-
+  
   protected
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:email, :password, :password_confirmation, :role)}

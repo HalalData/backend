@@ -1,0 +1,41 @@
+<%= render "include/navbar" %>
+
+<div class="jumbotron about-header">
+	<h1 class="logo vision">Helping Muslim gets halalan thoyiban around the world.</h1>
+	<h2>That is our simple vision.</h2>
+</div>
+
+<div class="container-fluid about-content">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<h2>About Us</h2>
+			<p>HalalData.org is a community search engine for muslim traveler to get information about halal place around the world.</p>
+			<p>It is an initiative from <a href="http://asep.co" target="_blank">Asep.co</a>; an app studio from Indonesia.</p>
+		</div>
+	</div>
+
+	<div class="row manifesto">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-1">
+			<h2>Manifesto</h2>
+			<ol>
+				<li>By mentioning halal data, we mean any foods and beverages that safe to be consumed by muslim; e.g., certified halal food/beverage, vegetarian food/beverage, or any place that provide halal food.</li>
+				<li>HalalData.org is a non profit initiative and we always open contribution from everyone to make HalalData better.</li>
+				<li>All data in our database is opened for everyone to be downloaded and used for any halal purposes either commercially or not.<span style="color: red;">*</span></li>
+			</ol>
+			<p><span style="color: red;">*</span> This feature will be developed soon.</p>
+		</div>
+	</div>
+
+	<div class="row manifesto">
+		<div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-1">
+			<h2>How to Contribute</h2>
+			<ol>
+				<li>If you want to help us by providing halal data in your city or country, you can <%= link_to "sign up", new_user_registration_path %> and start creating the data.</li>
+				<li>If you have a desire to be a data validator for your city you can talk to us at <%= link_to "halaldata@asep.co", "mailto: halaldata@asep.co" %>.</li>
+				<li>Do you code in Ruby and want to help us improve HalalData.org platform? Great, let's talk also at <%= link_to "halaldata@asep.co", "mailto: halaldata@asep.co" %>. Honestly we don't have a lot of developers, so your codes are welcome.</li>
+				<li>If you don't have any time to contribute using your energy, maybe you can contribute by donating. A little fund from you will be very helpful for HalalData.org operation.</li>
+				<li>Doesn't have anything for contribution? No problem. Just tell about HalalData.org to your friend and family. Help them to avoid consume non-halal food and beverage.</li>
+			</ol>
+		</div>
+	</div>
+</div>

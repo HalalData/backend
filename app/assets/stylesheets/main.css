@@ -54,3 +54,47 @@
 .user-field {
 	width: 100%;
 }
+
+/* page about */
+.vision {
+	font-size: 3em !important;
+	font-weight: 400 !important;
+	color: #fff !important;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.about-header {
+	background: #82b2ff;
+	text-align: center;
+}
+
+.about-header h2 {
+	color: #fff;
+	font-size: 1.8em;
+	font-weight: 300;
+}
+
+.about-content {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.about-content h2 {
+	font-weight: 400;
+	margin-bottom: 40px;
+}
+
+.about-content .row {
+	margin-bottom: 50px;
+}
+
+.manifesto {
+	text-align: left;
+}
+
+.manifesto ol {
+	padding-left: 20px !important;
+}
