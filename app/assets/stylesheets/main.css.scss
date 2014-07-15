@@ -4,7 +4,7 @@
 }
 
 .navbar-brand {
-	background: url('/assets/logo_small.png') center center no-repeat;
+	background: asset_url('logo_small.png') center center no-repeat;
 	color: transparent;
 	height: 50px;
 	width: 60px;
@@ -15,7 +15,7 @@
 }
 
 .logo {
-	background: url('/assets/logo.png') center center no-repeat;
+	background: asset_url('logo.png') center center no-repeat;
 	color: transparent;
 	height: 166px;
 	margin-bottom: 30px;
