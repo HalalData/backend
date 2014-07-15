@@ -87,10 +87,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :authentication => :plain,
-    :address => "mailgun.org",
+    :address => "smtp.mailgun.org",
     :port => 587,
-    :domain => "mailgun.org",
-    :user_name => "postmaster@asep.co.mailgun.org",
+    :domain => "asep.co",
+    :user_name => "postmaster@asep.co",
     :password => "70veae5vjj-7"
   }
   config.action_mailer.perform_deliveries = true
