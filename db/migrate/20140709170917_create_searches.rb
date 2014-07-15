@@ -12,6 +12,6 @@ class CreateSearches < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :searches, [:name, :address, :country_name, :category_name], name: 'search_venue',type: :fulltext
+    add_index :searches, [:name, :address, :country_name, :category_name], name: 'search_venue', type: :fulltext
   end
 end
