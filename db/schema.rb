@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140711154911) do
+ActiveRecord::Schema.define(version: 20140716182247) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -56,8 +56,11 @@ ActiveRecord::Schema.define(version: 20140711154911) do
     t.string   "fax"
     t.string   "email"
     t.string   "website"
+    t.string   "source"
   end
 
+  add_index "searches", ["category_name"], name: "category_name", type: :fulltext
+  add_index "searches", ["country_name"], name: "country_name", type: :fulltext
   add_index "searches", ["name", "address", "country_name", "category_name"], name: "search_venue", type: :fulltext
 
   create_table "users", force: true do |t|
