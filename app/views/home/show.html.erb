@@ -10,7 +10,11 @@
 				<div class="list-item">
 					<h3><%= link_to row.name.split.map(&:capitalize).join(' '), place_path(row.id) %></h3>
 					<p><%= row.address.split.map(&:capitalize).join(' ') %></p>
+					<% if row.postal_code %>
 					<p><%= row.country_name + ", " + row.postal_code %></p>
+					<% else %>
+					<p><%= row.country_name %></p>
+					<% end %>
 					<p>Source: <%= link_to row.source, row.source %></p>
 				</div>
 				<% end %>
