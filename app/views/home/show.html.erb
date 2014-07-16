@@ -11,6 +11,7 @@
 					<h3><%= link_to row.name.split.map(&:capitalize).join(' '), place_path(row.id) %></h3>
 					<p><%= row.address.split.map(&:capitalize).join(' ') %></p>
 					<p><%= row.country_name + ", " + row.postal_code %></p>
+					<p>Source: <%= link_to row.source, row.source %></p>
 				</div>
 				<% end %>
 
