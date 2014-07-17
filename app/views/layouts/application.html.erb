@@ -7,6 +7,7 @@
 
   <meta property="og:title" content="Search Engine for Halal Place and Product Around the World" />
   <meta property="og:site_name" content="HalalData"/>
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="http://halaldata.org/about" />
   <meta property="og:description" content="Helping Muslim gets halalan thayyiban around the world. That is our simple vision." />
   <meta property="og:image" content="http://asep.co/wp-content/uploads/2014/07/Logo_Full.png" />
@@ -19,9 +20,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="wrapper">
+	 <%= yield %>
+  </div>
 
-	<%= yield %>
-
+  <div class="footer">
+    <div class="container">
+      <p class="text-muted">Initiative by <%= link_to "Asep.co", "http://asep.co", target: "blank" %></p>
+    </div>
+  </div>
 	<%= render "include/analytic" %>
 </body>
 </html>
