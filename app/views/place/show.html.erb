@@ -5,7 +5,12 @@
 		<div class="col-xs-12 col-sm-7 col-md-7 place">
 			<h3><%= @Place.name.split.map(&:capitalize).join(' ') %></h3>
 			<p><%= @Place.address.split.map(&:capitalize).join(' ') %></p>
+			<% if @Place.postal_code != '' %>
 			<p><%= @Place.country_name + ", " + @Place.postal_code %></p>
+			<% else %>
+			<p><%= @Place.country_name %></p>
+			<% end %>
+			<p>Source: <%= link_to @Place.source, @Place.source %></p>
 			<ul class="metadata">
 				<li>
 					Phone: 
