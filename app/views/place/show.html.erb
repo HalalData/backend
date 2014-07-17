@@ -10,7 +10,6 @@
 			<% else %>
 			<p><%= @Place.country_name %></p>
 			<% end %>
-			<p>Source: <%= link_to @Place.source, @Place.source %></p>
 			<ul class="metadata">
 				<li>
 					Phone: 
@@ -45,6 +44,7 @@
 					<%- end %>
 				</li>
 			</ul>
+			<p>Source: <%= link_to @Place.source, @Place.source %></p>
 		</div>
 	</div>
 </div>
