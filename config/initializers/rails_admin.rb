@@ -1,5 +1,7 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["HalalData", "contribution"]
+
   ### Popular gems integration
 
   ## == Devise ==

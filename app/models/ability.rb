@@ -8,13 +8,13 @@ class Ability
       if user.role == "author"
         can :create, [Place]
         can :update, [Place]
-        can :read, [Place, Country, Category]
-        can :create, [Country, Category] 
+        can :read, [Place, Country, Category, City]
+        can :create, [Country, Category, City] 
       elsif user.role == "admin"
         can :manage, :all
         can :read, :all 
       else user.role == "moderator"
-        can :manage, [Place, Country, Category]
+        can :manage, [Place, Country, Category, City]
         can :read, :all 
       end
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140716182247) do
+ActiveRecord::Schema.define(version: 20140720200634) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -20,11 +20,42 @@ ActiveRecord::Schema.define(version: 20140716182247) do
     t.datetime "updated_at"
   end
 
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.float    "latitude",   limit: 24
+    t.float    "longitude",  limit: 24
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "country_id"
+  end
+
   create_table "countries", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "indices", force: true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.string   "postal_code"
+    t.float    "latitude",       limit: 24
+    t.float    "longitude",      limit: 24
+    t.string   "city_name"
+    t.float    "city_latitude",  limit: 24
+    t.float    "city_longitude", limit: 24
+    t.string   "country_name"
+    t.string   "category_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "email"
+    t.string   "website"
+    t.string   "source"
+  end
+
+  add_index "indices", ["name", "address", "country_name", "city_name"], name: "search_venue", type: :fulltext
 
   create_table "places", force: true do |t|
     t.string   "name",                                 null: false
@@ -37,9 +68,10 @@ ActiveRecord::Schema.define(version: 20140716182247) do
     t.float    "latitude",    limit: 24, default: 0.0
     t.float    "longitude",   limit: 24, default: 0.0
     t.integer  "category_id"
-    t.integer  "country_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "city_id"
+    t.integer  "country_id"
   end
 
   create_table "searches", force: true do |t|
@@ -52,15 +84,8 @@ ActiveRecord::Schema.define(version: 20140716182247) do
     t.string   "category_name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "phone"
-    t.string   "fax"
-    t.string   "email"
-    t.string   "website"
-    t.string   "source"
   end
 
-  add_index "searches", ["category_name"], name: "category_name", type: :fulltext
-  add_index "searches", ["country_name"], name: "country_name", type: :fulltext
   add_index "searches", ["name", "address", "country_name", "category_name"], name: "search_venue", type: :fulltext
 
   create_table "users", force: true do |t|

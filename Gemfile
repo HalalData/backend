@@ -41,6 +41,12 @@ gem 'rubyXL'
 # pagination gem
 gem 'kaminari'
 
+# Geocode the address and get the coordinate
+# gem "geocoder"
+
+# Using foursquare API to get the map
+gem "foursquare2"
+
 # Use Puma as app server
 #gem "puma"
 

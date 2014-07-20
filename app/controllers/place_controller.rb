@@ -12,7 +12,7 @@ class PlaceController < ApplicationController
   end
 
   def show
-    @Place = Search.find(params[:id])
+    @Place = Index.find(params[:id])
   end
 
   def update
