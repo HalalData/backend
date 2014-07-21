@@ -9,7 +9,14 @@
 				<% @Places.each do |row| %>
 				<div class="list-item">
 					<h3><%= link_to row.name.split.map(&:capitalize).join(' '), place_path(row.id) %></h3>
-					<p><%= row.address.split.map(&:capitalize).join(' ') %></p>
+					<p>
+						<%= row.address.split.map(&:capitalize).join(' ') %>
+					</p>
+					<p>
+					<% if row.city_name %>
+						<%= row.city_name %>
+					<% end %>
+					</p>
 					<% if row.postal_code != '' %>
 					<p><%= row.country_name + ", " + row.postal_code %></p>
 					<% else %>

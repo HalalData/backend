@@ -44,6 +44,9 @@ gem 'kaminari'
 # Geocode the address and get the coordinate
 # gem "geocoder"
 
+# Show the map using Leaflet
+gem 'leaflet-rails'
+
 # Using foursquare API to get the map
 gem "foursquare2"
 

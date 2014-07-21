@@ -12,6 +12,9 @@
  *
  *= require bootstrap.min
  *= require bootstrap-theme.min
+ *= require leaflet
+ *= depend_on_asset "layers.png"
+ *= depend_on_asset "layers-2x.png"
  *= require_tree .
  *= require_self
  */
