@@ -48,7 +48,15 @@
 		</div>
 
 		<div class="col-xs-12 col-sm-5 col-md-5 place">
-	
+			
+			<% @Venue.venues.each do |venue| %>
+				<% if @Place.name.split.map(&:capitalize).join(' ') == venue.name %>
+					<%= venue.name %>
+					<%= venue.address %>
+					<%= venue.location[:lat] %>
+					<%= venue.location[:lng] %>
+				<% end %>
+			<% end %>
 		</div>
 	</div>
 </div>
