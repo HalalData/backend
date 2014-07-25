@@ -51,7 +51,11 @@
 					<%- end %>
 				</li>
 			</ul>
+			<% if @Place.source %>
 			<p>Source: <%= link_to @Place.source, @Place.source %></p>
+			<% else %>
+			<p>Source: HalalData's contributor %></p>
+			<% end %>
 		</div>
 
 		<div class="col-xs-12 col-sm-6 col-md-6 place">

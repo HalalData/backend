@@ -22,7 +22,11 @@
 					<% else %>
 					<p><%= row.country_name %></p>
 					<% end %>
+					<% if row.source %>
 					<p>Source: <%= link_to row.source, row.source %></p>
+					<% else %>
+					<p>Source: HalalData's contributor %></p>
+					<% end %>
 				</div>
 				<% end %>
 
