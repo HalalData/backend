@@ -13,9 +13,9 @@
 				<% end %>
 			</p>
 			<% if @Place.postal_code != '' %>
-			<p><%= @Place.country_name + ", " + @Place.postal_code %></p>
+			<p id="country-name"><%= @Place.country_name + ", " + @Place.postal_code %></p>
 			<% else %>
-			<p><%= @Place.country_name %></p>
+			<p id="country-name"><%= @Place.country_name %></p>
 			<% end %>
 			<ul class="metadata">
 				<li>
@@ -60,7 +60,6 @@
 
 		<div class="col-xs-12 col-sm-6 col-md-6 place">
 			<div id="map"></div>
-			<%= image_tag "powered_gray.png", width: 200 %>
 		</div>
 	</div>
 </div>

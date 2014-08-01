@@ -8,6 +8,8 @@ class PlaceController < ApplicationController
   This function will handle the map display function
   @params city_name is the name of the city
   @return response is a geojson object
+
+  Deprecated: Please use geocode from javascript in `result.js` directly to ArcGIS REST API
   DOC
   def display_map
     city = City.find_by_name params[:city]
