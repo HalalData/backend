@@ -50,6 +50,9 @@ gem 'leaflet-rails'
 # Using foursquare API to get the map
 gem "foursquare2"
 
+# Elastic Search
+gem "elasticsearch"
+
 # Use Puma as app server
 #gem "puma"
 

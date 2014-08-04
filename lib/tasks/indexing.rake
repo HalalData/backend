@@ -55,4 +55,44 @@ namespace :indexing do
   	end
   end
 
+  desc "Copy data from place table to elastic search"
+  task elastic: :environment do
+    places = Place.all
+
+    places.each do |row|
+      query = Jbuilder.encode do |json|
+        json.id row.id
+        json.name row.name
+        json.address row.address
+        json.postal_code row.postal_code
+        json.phone row.phone
+        json.fax row.fax
+        json.email row.email
+        json.website row.website
+        json.latitude row.latitude
+        json.longitude row.longitude
+        if row.city
+          json.country_name row.city.country.name
+          json.city_name row.city.name
+          json.city_latitude row.city.latitude
+          json.city_longitude row.city.longitude
+        else
+          json.country_name row.country.name
+        end
+        json.category_name row.category.name
+      end
+
+      # send to elasticsearch
+      uri = URI("http://128.199.139.216:9200/places/place/#{row.id}")
+      req = Net::HTTP::Put.new(uri)
+      req.body = query
+
+      res = Net::HTTP.start(uri.host, uri.port, :use_ssl => false) do |http|
+        http.request req
+      end
+
+      puts res.body
+    end
+    
+  end
 end
