@@ -8,25 +8,28 @@
 			<% if @Places.total_count > 0 %>
 				<% @Places.each do |row| %>
 				<div class="list-item">
-					<h3><%= link_to row.name.split.map(&:capitalize).join(' '), place_path(row.id) %></h3>
+					<h3><%= link_to row['_source']['name'].split.map(&:capitalize).join(' '), place_path(row['_source']['id']) %></h3>
 					<p>
-						<%= row.address.split.map(&:capitalize).join(' ') %>
+						<%= row['_source']['address'].split.map(&:capitalize).join(' ') %>
 					</p>
 					<p>
-					<% if row.city_name %>
-						<%= row.city_name %>
+					<% if row['_source']['city_name'] %>
+						<%= row['_source']['city_name'] %>
 					<% end %>
 					</p>
-					<% if row.postal_code != '' %>
-					<p><%= row.country_name + ", " + row.postal_code %></p>
+					<% if row['_source']['postal_code'] != '' %>
+					<p><%= row['_source']['country_name'] + ", " + row['_source']['postal_code'] %></p>
 					<% else %>
-					<p><%= row.country_name %></p>
+					<p><%= row['_source']['country_name'] %></p>
 					<% end %>
-					<% if row.source %>
-					<p>Source: <%= link_to row.source, row.source %></p>
+					
+					<!--
+					<% if row['_source']['source'] %>
+					<p>Source: <%= link_to row['_source']['source'], row['_source']['source'] %></p>
 					<% else %>
 					<p>Source: HalalData's contributor</p>
 					<% end %>
+					-->
 				</div>
 				<% end %>
 

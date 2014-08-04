@@ -1,7 +1,15 @@
 class PlaceController < ApplicationController
   
   def show
-    @Place = Index.find(params[:id])
+    client = Elasticsearch::Client.new host: '10.130.220.111:9200'
+    @Place = client.search index: 'places', type: 'place', body: { 
+      query: { 
+        query_string: { 
+          query: params['id'],
+          fields: ['id']  
+        } 
+      } 
+    }
   end
 
   <<-DOC

@@ -83,7 +83,7 @@ namespace :indexing do
       end
 
       # send to elasticsearch
-      uri = URI("http://128.199.139.216:9200/places/place/#{row.id}")
+      uri = URI("http://10.130.220.111:9200/places/place/#{row.id}")
       req = Net::HTTP::Put.new(uri)
       req.body = query
 
