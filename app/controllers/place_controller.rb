@@ -1,7 +1,7 @@
 class PlaceController < ApplicationController
   
   def show
-    client = Elasticsearch::Client.new host: '10.130.220.111:9200'
+    client = Elasticsearch::Client.new host: '128.199.139.216:9200'
     @Place = client.search index: 'places', type: 'place', body: { 
       query: { 
         query_string: { 
