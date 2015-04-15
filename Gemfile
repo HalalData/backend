@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
-# Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'rails', '~> 4.2.1'
+# Use PostgreSQL as the database for Active Record
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -26,35 +26,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-# Authentication
-gem 'devise'
-
-# Authorization
-gem "cancan"
-
-# Admin interface
-gem "rails_admin"
-
-# xlsx file
-gem 'rubyXL'
-
-# pagination gem
-gem 'kaminari'
-
-# Geocode the address and get the coordinate
-# gem "geocoder"
-
-# Show the map using Leaflet
-gem 'leaflet-rails'
-
-# Using foursquare API to get the map
-gem "foursquare2"
-
-# Elastic Search
-gem "elasticsearch"
-
 # Use Puma as app server
-#gem "puma"
+gem "puma"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -63,13 +36,13 @@ gem "elasticsearch"
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-group :development do
-	gem 'capistrano', '~> 3.1.0'
-	gem 'capistrano-bundler', '~> 1.1.2'
-	gem 'capistrano-rails'
-	gem 'capistrano-rbenv', github: "capistrano/rbenv"
+# group :development do
+#	gem 'capistrano', '~> 3.1.0'
+#	gem 'capistrano-bundler', '~> 1.1.2'
+#	gem 'capistrano-rails'
+#	gem 'capistrano-rbenv', github: "capistrano/rbenv"
 #	gem 'capistrano3-puma', github: "seuros/capistrano-puma"
-end
+# end
 
 
 # Use debugger
