@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.1'
@@ -36,13 +36,9 @@ gem "puma"
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# group :development do
-#	gem 'capistrano', '~> 3.1.0'
-#	gem 'capistrano-bundler', '~> 1.1.2'
-#	gem 'capistrano-rails'
-#	gem 'capistrano-rbenv', github: "capistrano/rbenv"
-#	gem 'capistrano3-puma', github: "seuros/capistrano-puma"
-# end
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
 
 
 # Use debugger
