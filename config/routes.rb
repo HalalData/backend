@@ -9,9 +9,6 @@ Rails.application.routes.draw do
   # show page detail
   get 'place/:id', to: 'place#show', as: :place
 
-  devise_for :users
-  mount RailsAdmin::Engine => '/manage', as: 'rails_admin'
-  
   # home and query result
   get 'home/show'
   get 'home/index'
