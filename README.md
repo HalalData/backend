@@ -3,6 +3,8 @@ The Backend
 
 This is the [Ruby on Rails](http://rubyonrails.org) application that powers [HalalData](http://halaldata.org) website and API.
 
+[![Build Status](https://travis-ci.org/HalalData/backend.svg?branch=development)](https://travis-ci.org/HalalData/backend)
+
 This repository consists of:
 
 - Halal food or restaurant API endpoint
