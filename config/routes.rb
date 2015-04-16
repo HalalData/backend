@@ -1,20 +1,17 @@
 Rails.application.routes.draw do
   
-  # For serving the map
-  get 'map', to: 'place#display_map'
-
-  # page about
-  get 'about', to: 'page#index', as: :about
-
-  # show page detail
-  get 'place/:id', to: 'place#show', as: :place
-
-  # home and query result
-  get 'home/show'
-  get 'home/index'
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  
+  # Route for API version 1 
+  namespace :v1 do
+    get 'venues' => 'venues#index'
+    get 'venues/:id' => 'venues#show'
+    post 'venues' => 'venues#create'
+    patch 'venues/:id' => 'venues#update'
+    put 'venues/:id' => 'venues#update'
+    delete 'venues/:id' => 'venues#delete'
+  end
 
   # You can have the root of your site routed with "root"
   root 'home#index'
@@ -59,12 +56,5 @@ Rails.application.routes.draw do
   #     post 'toggle'
   #   end
   #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  #   resources :photos, concerns: :toggleable 
 end
