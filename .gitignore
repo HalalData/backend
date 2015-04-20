@@ -35,3 +35,4 @@ build/
 .rvmrc
 
 .DS_store
+config/database.yml
