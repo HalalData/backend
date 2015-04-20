@@ -1,5 +1,5 @@
 # include domain object
-require_relative '../../domains/venue'
+require_relative '../../services/venue'
 
 class V1::VenuesController < V1::ApiController
   before_filter :initialize
@@ -31,6 +31,6 @@ class V1::VenuesController < V1::ApiController
 
   private
   def initialize
-    @venue = ::VenueDomain.new
+    @venue = ::VenueService.new
   end
 end
