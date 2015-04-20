@@ -1,8 +1,8 @@
 # include domain object
-require_relative '../../domains/venue'
+require_relative '../../services/venue'
 
 class V1::VenuesController < V1::ApiController
-  before_filter :initialize
+  before_filter :set_services
 
   def index
     venue_data = @venue.show_recent
@@ -30,7 +30,7 @@ class V1::VenuesController < V1::ApiController
   end
 
   private
-  def initialize
-    @venue = ::VenueDomain.new
+  def set_services
+    @venue = ::VenueService.new
   end
 end

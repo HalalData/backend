@@ -1,5 +1,5 @@
 # This class is intended for describing the business logic.
-class RatingDomain
+class RatingService
   
   # User can give rating to the venue via this method.
   # TBD:

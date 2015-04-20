@@ -2,7 +2,7 @@
 # 
 # I'm trying to separate the business logic in domains to avoid getting fat controller.
 # I also want to do isolated test for this class. 
-class VenueDomain
+class VenueService
   
   # Show recent venues to user.
   # TBD: Is it better if we give default max limit for the result?
