@@ -1,13 +1,98 @@
+# Ignore bundler config
+/.bundle
+/vendor/bundle/
+/vendor/ruby/
+
+# Ignore the default database.
+/db/*.sqlite3
+/db/*.javadb/
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp
+.powder
+.virb*
+*.*~
+
+# various artifacts
+**.war
 *.gem
 *.rbc
-/.config
-/coverage/
+*.sassc
+.rspec
+.redcar/
+.config
+.sass-cache
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/public/assets/*
+/public/sitemaps
+/spec/tmp/*
+/cache
+/capybara*
+/capybara-*.html
+/gems
+/specifications
+rerun.txt
+pickle-email-*.html
+.zeus.sock
+/solr/
+/.gemtags
+/coverage
+/coverage.data
 /InstalledFiles
 /pkg/
 /spec/reports/
 /test/tmp/
 /test/version_tmp/
-/tmp/
+
+# scm revert files
+**.orig
+
+# Configuration files
+config/app_config.yml
+config/database.yml
+config/application.yml
+config/mandrill.yml
+config/paperclip.yml
+
+# System Recordings from Tropo
+public/tropo_recordings/**/*
+public/system/**/*
+
+# Dev Machines
+.DS_Store
+*/.DS_Store
+
+Procfile.dev
+.env
+.env.development
+.env.test
+.env.staging
+.env.production
+/*.sublime-workspace
+
+# Netbeans project directory
+/nbproject/
+
+# RubyMine project files
+.idea
+
+# Textmate project files
+/*.tmproj
+
+# vim artifacts
+**.swp
+.vim
+/.tags
+/.tags_sorted_by_file
+
+# Application specific
+*.txt
+/doc
+/public/uploads
+
 
 ## Specific to RubyMotion:
 .dat*
@@ -17,7 +102,6 @@ build/
 ## Documentation cache and generated files:
 /.yardoc/
 /_yardoc/
-/doc/
 /rdoc/
 
 ## Environment normalisation:
